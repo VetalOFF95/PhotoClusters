@@ -27,7 +27,9 @@ final class PhotoLibrary: ObservableObject {
             }
         }
         
-        self.authorizationStatus = status
+        await MainActor.run {
+            self.authorizationStatus = status
+        }
     }
 
     public func loadAllPhotos(limit: Int? = nil) {
