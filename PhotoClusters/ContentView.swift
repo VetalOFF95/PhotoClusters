@@ -34,7 +34,7 @@ struct ContentView: View {
     }
     
     // MARK: - State
-    @StateObject private var library = PhotoLibrary()
+    @StateObject private var library: PhotoLibrary
     @StateObject private var clusterer: PhotoClusterer
 
     @State private var threshold: Float = 0.6
