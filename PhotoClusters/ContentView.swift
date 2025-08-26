@@ -14,8 +14,6 @@ struct ContentView: View {
     // MARK: - Constants
     private struct Constants {
         static let navigationTitle = "Similar Photos"
-        static let defaultThreshold: Float = 0.6
-        static let defaultMaxItems: Int = 1000
         static let analyzingText = "Analyzing…"
         static let noClustersText = "No clusters yet"
         static let startClusteringText = "Start clusterization"
@@ -39,8 +37,8 @@ struct ContentView: View {
     @StateObject private var library = PhotoLibrary()
     @StateObject private var clusterer: PhotoClusterer
 
-    @State private var threshold: Float = Constants.defaultThreshold
-    @State private var maxItems: Int = Constants.defaultMaxItems
+    @State private var threshold: Float = 0.6
+    @State private var maxItems: Int = 300
     @State private var showingSettings = false
 
     // MARK: - Init

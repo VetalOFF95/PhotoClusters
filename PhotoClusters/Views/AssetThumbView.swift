@@ -40,7 +40,11 @@ struct AssetThumbView: View {
             }
         }
         .cornerRadius(Constants.cornerRadius)
-        .onAppear { Task { await loadImage() } }
+        .onAppear {
+            Task {
+                await loadImage()
+            }
+        }
     }
     
     // MARK: - Private functions

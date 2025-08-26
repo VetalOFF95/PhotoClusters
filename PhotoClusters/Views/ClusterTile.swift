@@ -58,7 +58,11 @@ struct ClusterTile: View {
             }
         }
         .cornerRadius(Constants.cornerRadius)
-        .onAppear { Task { await loadThumb() } }
+        .onAppear {
+            Task {
+                await loadThumb()
+            }
+        }
     }
     
     // MARK: - Private functions
